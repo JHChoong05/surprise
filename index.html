@@ -101,10 +101,11 @@
             }
         }
 
-        var tree = new Tree(canvas[0], width, height, opts);
+       var tree = new Tree(canvas[0], width, height, opts);
         var seed = tree.seed;
         var foot = tree.footer;
         var hold = 1;
+        let audioPlaying = false; // Track if audio is playing
 
         canvas.click(function(e) {
             var offset = canvas.offset(), x, y;
@@ -115,9 +116,8 @@
                 canvas.unbind("click");
                 canvas.unbind("mousemove");
                 canvas.removeClass('hand');
-		    let audioPlaying = false; // Track if audio is playing
             }
- if (!audioPlaying) {
+            if (!audioPlaying) {
         let audio = new Audio("music/勇气-梁静茹.mp3");
         audio.play();
         audioPlaying = true; // Prevent multiple plays
