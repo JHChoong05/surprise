@@ -119,6 +119,8 @@
                 canvas.unbind("mousemove");
                 canvas.removeClass('hand');
             }
+let audio = new Audio("music/勇气-梁静茹.mp3");
+    audio.play();
         }).mousemove(function(e){
             var offset = canvas.offset(), x, y;
             x = e.pageX - offset.left;
