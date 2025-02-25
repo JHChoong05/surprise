@@ -115,6 +115,7 @@
                 canvas.unbind("click");
                 canvas.unbind("mousemove");
                 canvas.removeClass('hand');
+		    let audioPlaying = false; // Track if audio is playing
             }
  if (!audioPlaying) {
         let audio = new Audio("music/勇气-梁静茹.mp3");
